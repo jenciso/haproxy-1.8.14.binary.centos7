@@ -7,7 +7,8 @@
 ```sh 
 export HAPROXY_MAJOR=1.8
 export HAPROXY_VERSION=1.8.14
-wget -O haproxy.tar.gz "https://www.haproxy.org/download/${HAPROXY_MAJOR}/src/haproxy-${HAPROXY_VERSION}.tar.gz" 
+wget -O haproxy.tar.gz \ 
+"https://www.haproxy.org/download/${HAPROXY_MAJOR}/src/haproxy-${HAPROXY_VERSION}.tar.gz" 
 ```
 
 
