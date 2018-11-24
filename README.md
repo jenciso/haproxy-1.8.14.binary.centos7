@@ -32,7 +32,7 @@ make install
 
 * Install
 
-```
+```sh
 install -d "/usr/sbin"
 install -m 755 haproxy  "/usr/local/sbin"
 install -d "/usr/share/man"/man1
@@ -41,7 +41,7 @@ install -m 644 man/haproxy.1 "/usr/local/share/man"/man1
 
 ### Options used to compile
 
-```
+```sh
 [root@7aeb6f9453e4 haproxy-1.8.14]# ./haproxy -vv
 HA-Proxy version 1.8.14-52e4d43 2018/09/20
 Copyright 2000-2018 Willy Tarreau <willy@haproxy.org>
