@@ -2,13 +2,41 @@
 
 ### Install
 
+* Download the latest haproxy version
+
+```sh 
+export HAPROXY_MAJOR=1.8
+export HAPROXY_VERSION=1.8.14
+wget -O haproxy.tar.gz "https://www.haproxy.org/download/${HAPROXY_MAJOR}/src/haproxy-${HAPROXY_VERSION}.tar.gz" 
+```
+
+
+
+* Install pre packages
+
+```sh
+yum install -y inotify-tools wget tar gzip make gcc perl pcre-devel zlib-devel iptables \
+openssl openssl-devel openssl-libs systemd-devel
+```
+
+* Compiling
+
+```sh
+tar xvfz haproxy.tar.gz
+cd haproxy-1.8.14/
+make TARGET=linux2628 USE_GETADDRINFO=1 USE_ZLIB=1 USE_REGPARM=1 USE_OPENSSL=1 \
+USE_SYSTEMD=1 USE_PCRE=1 USE_PCRE_JIT=1 USE_NS=1
+make install
+``` 
+
+* Install
+
 ```
 install -d "/usr/sbin"
 install -m 755 haproxy  "/usr/local/sbin"
 install -d "/usr/share/man"/man1
 install -m 644 man/haproxy.1 "/usr/local/share/man"/man1
 ```
-
 
 ### Options used to compile
 
