@@ -16,6 +16,8 @@ wget -O haproxy.tar.gz \
 * Install pre packages
 
 ```sh
+yum install -y epel-release
+yum update -y
 yum install -y inotify-tools wget tar gzip make gcc perl pcre-devel zlib-devel iptables \
 openssl openssl-devel openssl-libs systemd-devel
 ```
@@ -83,6 +85,13 @@ Available filters :
         [COMP] compression
         [TRACE] trace
 ```
+
+### Using docker to compile
+
+```sh
+docker run -it --name temporal centos:centos7 bash
+
+``` 
 
 ### Author
 
